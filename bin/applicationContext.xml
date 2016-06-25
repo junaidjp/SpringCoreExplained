@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+
+
+	<bean id="address" class="com.junaid.training.spring.Address">
+		<property name="streetname" value="some street"></property>
+		<property name="city" value="Richardson"></property>
+	</bean>
+
+	<bean id="SimpleDependancyInjection" class="com.junaid.training.spring.SimpleDependancyInjection">
+
+		<property name="currentWork" value="Getting Trained in Java" />
+
+		<property name="yourName" value="Krishna Veni"></property>
+
+
+		<property name="age" value="25"></property>
+
+		<property name="yourSpecialization">
+			<map>
+				<entry key="languages">
+					<value>C,C++,Java</value>
+				</entry>
+
+				<entry key="web">
+					<value>HTML,Servlet,JSP,JSTL,JQUERY,AJAX</value>
+				</entry>
+
+				<entry key="enterprise">
+					<value>EJB,Spring,WEBSERVICES</value>
+				</entry>
+
+				<entry key="frameworks">
+					<value>Struts,Spring,SOA</value>
+				</entry>
+
+			</map>
+		</property>
+
+
+		<property name="address">
+			<map>
+				<entry key="addressKey">
+		    
+					<ref bean="address" />
+
+				</entry>
+
+			</map>
+		</property>
+		
+			</bean>
+
+</beans>
